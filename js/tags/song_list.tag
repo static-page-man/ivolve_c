@@ -2,7 +2,7 @@
   <div if={!this.list}> Now loading...</div>
   <ul  if={this.list} class="call_ul">
     <li each={song in this.list} class="call_li">
-      <a href="/#song?title={song.title}">
+      <a href="{location.href}#song?title={song.title}">
         <div class="media">
           <figure class="media-left">
             <p class="image is-64x64 call_li__image" style="background-image:url({song.thumbnail_image_url})"></p>
