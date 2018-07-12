@@ -1,0 +1,74 @@
+/* header */
+.ticketText {
+  text-indent: .5rem
+}
+
+/* call list */
+.call_ul {
+  /* padding: 1rem; */
+}
+.call_li {
+  padding: 1rem;
+  position: relative;
+  padding-bottom: 0;
+}
+.call_li__image {
+  background-position: center;
+  background-size: cover;
+  border-radius: .5rem;
+}
+.comming_soon_tag {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.dandy_content {
+  position: relative;
+}
+
+/* youtube */
+.youtube_wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 30%;
+  position: fixed;
+  z-index: 1;
+}
+@media only screen and (max-device-width: 768px) {
+  .youtube_wrap {
+    padding-top: 56.25%;
+  }
+}
+.youtube_wrap iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 50vh;  
+}
+
+
+.ticket_link {
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* call */
+.call_color {
+  color: red;
+}
+
+/* footer */
+.footer_clear {
+  width: 100%;
+  padding-bottom: 2rem;
+  font-size: 0.5rem;  
+}
+
+.footer__twitter_button {
+  text-align: center;
+  margin: .5rem;
+}

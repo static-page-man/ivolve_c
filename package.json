@@ -1,0 +1,19 @@
+{
+  "name": "ivolve_call",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run riot & npm run server",
+    "riot": "node_modules/.bin/riot -w js/tags/ js/all_tag.js --style stylus",
+    "server": "node_modules/.bin/browser-sync start --server --files 'js/**/*.*'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "riot": "^3.4.1",
+    "riot-route": "^3.1.3",
+    "stylus": "^0.54.5"
+  }
+}
