@@ -1,7 +1,7 @@
 <song-list>
   <div if={!this.list}> Now loading...</div>
   <ul  if={this.list} class="call_ul">
-    <li each={song in this.list} class="call_li">
+    <li if={song.active === 'TRUE'} each={song in this.list} class="call_li">
       <a href="{location.href}#song?title={song.title}">
         <div class="media">
           <figure class="media-left">
