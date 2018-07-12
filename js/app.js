@@ -4,7 +4,8 @@ var siteTitle = 'IVOLVEのコール'
 // App情報を持つオブジェクト
 if(typeof(ARISU) === 'undefined'){
   ARISU = {};
-  ARISU['isDebag'] = true;
+  // ARISU['isDebag'] = true;
+  ARISU['isDebag'] = (location.host === 'localhost:3000');
 }
 
 // consoleにlogをはく 
