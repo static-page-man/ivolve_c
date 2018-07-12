@@ -1,4 +1,4 @@
-riot.tag2('content-page', '<router> <route path=""> <top-page></top-page> <site-footer></site-footer> </route> <route path="{locaion.href}song.."> <song-page></song-page> </route> </router>', '', '', function(opts) {
+riot.tag2('content-page', '<router> <route path=""> <top-page></top-page> <site-footer></site-footer> </route> <route path="song.."> <song-page></song-page> </route> </router>', '', '', function(opts) {
 });
 riot.tag2('hero-header', '<section id="hero-header" class="hero is-primary"> <div class="hero-body"> <div class="container"> <h1 class="title hero_title"> IVOLVE </h1> <h2 class="hero_subtitle subtitle"> IVOLVEの一般的なコールをまとめました </h2> </div> </div> </section>', 'hero-header .hero_title,[data-is="hero-header"] .hero_title{ font-weight: bold; } hero-header .hero_subtitle,[data-is="hero-header"] .hero_subtitle{ font-size: 1rem; }', '', function(opts) {
   this.init = function(){
