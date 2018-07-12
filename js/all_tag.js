@@ -154,5 +154,5 @@ riot.tag2('song-page', '<div class="youtube_wrap"> <div id="player"></div> </div
 
 riot.tag2('top-page', '<hero-header></hero-header> <div class="container"> <song-list><song-list> </div>', '', '', function(opts) {
 });
-riot.tag2('twitter-share-button', '<div class="footer__twitter_button"> <a href="https://twitter.com/share" class="twitter-share-button" data-text="IVOLVEのコール練習中！" data-url="https://www.yahoo.co.jp/" data-hashtags="IVOLVE,コール" data-show-count="false">Tweet</a> <div class="footer__twitter_button">', 'twitter-share-button .footer__twitter_button,[data-is="twitter-share-button"] .footer__twitter_button{ text-align: center; margin: 2rem; }', '', function(opts) {
+riot.tag2('twitter-share-button', '<div class="footer__twitter_button"> <a href="https://twitter.com/share" class="twitter-share-button" data-text="IVOLVEのコール練習中！" data-url="https://static-page-man.github.io/ivolve/" data-hashtags="IVOLVE,コール" data-show-count="false">Tweet</a> <div class="footer__twitter_button">', 'twitter-share-button .footer__twitter_button,[data-is="twitter-share-button"] .footer__twitter_button{ text-align: center; margin: 2rem; }', '', function(opts) {
 });
