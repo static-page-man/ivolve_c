@@ -3,7 +3,7 @@
   <a href="https://twitter.com/share" 
     class="twitter-share-button" 
     data-text="IVOLVEのコール練習中！"
-    data-url="https://static-page-man.github.io/ivolve/"
+    data-url="{this.dataUrl}"
     data-hashtags="IVOLVE,コール" 
     data-show-count="false">Tweet</a>
   <div class="footer__twitter_button">
@@ -13,4 +13,12 @@
     margin: 2rem;
   }
   </style>
+  <script>
+    this.dataUrl = location.href;
+    init(){
+      // twitterボタン生成
+      twttr.widgets.load();
+    }
+    this.on('mount',this.init);
+  </script>
 </twitter-share-button>
