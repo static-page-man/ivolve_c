@@ -7,7 +7,7 @@
     </route>
 
     <!-- song page -->
-    <route path="/song..">
+    <route path="{locaion.href}song..">
       <song-page></song-page>
     </route>
   </router>
