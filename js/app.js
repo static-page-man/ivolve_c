@@ -62,34 +62,6 @@ function getSongList(callbackName) {
         return songData
       })
 }
-// // songs
-// var songs = {
-//   setuna_sora: {
-//     songName: 'セツナソラ'
-//     ,path: 'setuna_sora.html'
-//     ,videoKey: 'w9u2SkIVRZg'
-//   }
-//   ,zero_ichi: {
-//     songName: '01-ゼロイチ'
-//     ,path: 'zero_ichi.html'
-//     ,videoKey:'S1AP-AX8Mds'
-//   }
-//   ,dod: {
-//     songName: 'Dream on, Dreamers'
-//     ,path: 'dod.html'
-//     ,videoKey:'PNF3fKdEErA'
-//   }
-//   ,dangan: {
-//     songName: '弾丸ハイジャンプ'
-//     ,path: 'dangan.html'
-//     ,videoKey:'8DQPK25dQQc'
-//   }
-//   ,mousou_chu: {
-//     songName: '妄想Chu⤴︎'
-//     ,path: 'mousou_chu.html'
-//     ,videoKey: 'VpSE3h_M7yU'
-//   }
-// }
 
 // youtube apiが設定済みか判定
 // @return {boolean}
@@ -190,19 +162,6 @@ function stopVideo() {
   player.stopVideo();
 }
 
-// /**
-//  * lyricsのheightを演算して返却(px)
-//  * @returns {string} lyricsHeightPx
-//  */
-// function getLyricsHeight() {
-//   var lyricsHeightPx = '100';
-//   var header = document.getElementsByTagName('header')[0];
-//   var youtubeWrap = document.getElementsByClassName('youtube_wrap')[0];
-
-//   var windowHeight = window.innerHeight;
-
-//   return (windowHeight - header.offsetHeight - youtubeWrap.offsetHeight) + 'px';
-// }
 /**
  * URL解析して、クエリ文字列を返す
  * @returns {Array} クエリ文字列

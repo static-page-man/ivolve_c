@@ -17,6 +17,10 @@ npm install
 
 # 使用してる主なライブラリ
 
+- cssフレームワーク <br>
+  [bulma](https://bulma.io/)
+- icon <br>
+  [font-awesome](https://fontawesome.com/v4.7.0/)
 - カスタムタグ＆routerを使用　<br>
  [riot.js](https://riot.js.org/ja/)
 - cssをsassみたいにかけるやーつ <br>
