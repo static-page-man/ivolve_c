@@ -1,5 +1,3 @@
-riot.tag2('content-page', '<router> <route path=""> <top-page></top-page> <site-footer></site-footer> </route> <route path="song.."> <song-page></song-page> </route> </router>', '', '', function(opts) {
-});
 riot.tag2('hero-header', '<section id="hero-header" class="hero is-primary"> <div class="hero-body"> <div class="container"> <h1 class="title hero_title"> IVOLVE </h1> <h2 class="hero_subtitle subtitle"> IVOLVEの一般的なコールをまとめました </h2> </div> </div> </section>', 'hero-header .hero_title,[data-is="hero-header"] .hero_title{ font-weight: bold; } hero-header .hero_subtitle,[data-is="hero-header"] .hero_subtitle{ font-size: 1rem; }', '', function(opts) {
   this.init = function(){
 
@@ -7,6 +5,8 @@ riot.tag2('hero-header', '<section id="hero-header" class="hero is-primary"> <di
     document.getElementById('hero-header').setAttribute('style','padding-top:'+hh+'px');
   }.bind(this)
   this.on('mount',this.init);
+});
+riot.tag2('index-page', '<top-page></top-page> <site-footer></site-footer>', '', '', function(opts) {
 });
 riot.tag2('site-footer', '<footer class="footer footer_clear"> <div class="container"> <div class="content has-text-centered"> <p> まずはスマホ用のレイアウトで作成しています。<br> 何か不具合がありましたらこちらまで <a href="https://twitter.com/PageStatic" target="_blank">@PageStatic</a> </p> </div> </div> <twitter-share-button></twitter-share-button> </footer>', '', '', function(opts) {
 });
@@ -54,6 +54,7 @@ riot.tag2('song-list', '<div if="{!this.list}"> Now loading...</div> <ul if="{th
 });
 riot.tag2('song-page', '<div class="youtube_wrap"> <div id="player"></div> </div> <div if="{this.song && this.song.lyric_file_url}" id="lyrics"> <iframe id="lyricsFrame" onload="{this.setLyricViewHeight}" riot-src="{this.song.lyric_file_url}?embedded=true"></iframe> </div> <twitter-share-button></twitter-share-button>', 'song-page #font_size_button,[data-is="song-page"] #font_size_button{ position: fixed; bottom: 1rem; right: 1rem; display: flex; } song-page #lyrics,[data-is="song-page"] #lyrics{ width: 100%; padding: 1rem; overflow-y: scroll; overflow-x: hidden; -webkit-overflow-scrolling: touch; } song-page #lyrics iframe,[data-is="song-page"] #lyrics iframe{ width: 100%; height: 200vh; }', '', function(opts) {
     var self = this;
+    this.songTitle = opts.songTitle;
 
     this.setLyricViewHeight = function(e){
       var height = e.target.offsetHeight;
@@ -140,13 +141,6 @@ riot.tag2('song-page', '<div class="youtube_wrap"> <div id="player"></div> </div
       });
     }.bind(this)
 
-    this.on('route',function(){
-      poyyer('route');
-      var q = route.query();
-      var deTitle = decodeURIComponent(q.title);
-      poyyer(deTitle);
-      this.songTitle = deTitle;
-    })
     this.on('mount',this.init)
     this.on('unmout',this.close)
 });

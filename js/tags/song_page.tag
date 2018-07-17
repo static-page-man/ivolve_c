@@ -30,6 +30,7 @@
   </style>
   <script>
     var self = this;
+    this.songTitle = opts.songTitle;
 
     // iframeのheightを設定する
     setLyricViewHeight(e){
@@ -123,13 +124,6 @@
       });
     }
 
-    this.on('route',function(){
-      poyyer('route');
-      var q = route.query();
-      var deTitle = decodeURIComponent(q.title);
-      poyyer(deTitle);
-      this.songTitle = deTitle;
-    })
     this.on('mount',this.init)
     this.on('unmout',this.close)
   </script>

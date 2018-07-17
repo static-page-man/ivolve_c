@@ -42,7 +42,7 @@
   crossorigin="anonymous"></script>
   <!-- tag -->
   <script src="./node_modules/riot/riot.min.js"></script>
-  <script src="./node_modules/riot-route/dist/route+tag.js"></script>
+  <script src="./node_modules/riot-route/dist/route.min.js"></script>
   <script src='./js/all_tag.js'></script>
   <script src="./js/app.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -57,12 +57,31 @@
 </head>
 <body>
   <site-header></site-header>
-  <content-page></content-page>
+  <div id="page-contents"></div>
   <script>
     // riot observer
     var riotObserver = riot.observable();
     // tag mount
     riot.mount('*');
+
+    // router
+    route("", function(){
+      riot.mount('#page-contents', 'index-page');
+    });
+
+    route('song..', function(){
+      poyyer('route');
+      var q = route.query();
+      var deTitle = decodeURIComponent(q.title);
+      poyyer(deTitle);
+
+      // GA
+      gtag('event','song/'+deTitle);
+      riot.mount('#page-contents', 'song-page', {songTitle:deTitle});
+    });
+
+    route.start(true);
+    
     document.getElementById('siteTitle').innerHTML = siteTitle;
   </script>
 </body>
