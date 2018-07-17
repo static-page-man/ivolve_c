@@ -6,13 +6,13 @@
       </span>
     </div>
     <!--  ticket link  -->
-    <!--  <div class="nav-right">
+    <div class="nav-right">
       <span class="nav-item">
-        <a href="https://ticket.rakuten.co.jp/music/jpop/idle/RTRNPRF" class="button is-primary" target='_blank'>
+        <a href="http://m.sp2.fujitv.co.jp/lib_info.cgi?bid=2863&cid=36" class="button is-primary" target='_blank'>
           <i class="fa fa-ticket" aria-hidden="true"></i>
-          <span class="ticketText">2017.12.17 Ticket</span>
+          <span class="ticketText">TIF2018 無料壁紙！</span>
         </a>
-    </div>    -->
+    </div>  
   </header>
   <style>
   #site_header {
