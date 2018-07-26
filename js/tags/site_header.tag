@@ -8,7 +8,7 @@
     <!--  ticket link  -->
     <div class="nav-right">
       <span class="nav-item">
-        <a href="http://m.sp2.fujitv.co.jp/lib_info.cgi?bid=2863&cid=40" class="button is-primary" target='_blank'>
+        <a href="http://m.sp2.fujitv.co.jp/lib_info.cgi?bid=2863&cid=44" class="button is-primary" target='_blank'>
           <i class="fa fa-ticket" aria-hidden="true"></i>
           <span class="ticketText">TIF2018 無料壁紙！</span>
         </a>
