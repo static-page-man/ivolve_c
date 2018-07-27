@@ -1,5 +1,5 @@
 <hero-header>
-  <section id='hero-header' class="hero is-primary">
+  <section id='hero-header' class="hero">
     <div class="hero-body">
       <div class="container">
         <h1 class="title hero_title">
@@ -13,11 +13,18 @@
   </section>
   <style>
   .hero{
+    &-body {
+      background-image: url('./image/016sukagamino17103_TP_V.jpg');
+      background-position: center;
+      background-size: cover;
+    }
     &_title {
-    font-weight: bold;
+      color:white;
+      font-weight: bold;
     }
     &_subtitle {
-    font-size: 1rem;
+      color:white;
+      font-size: 1rem;
     }
   }
   </style>
