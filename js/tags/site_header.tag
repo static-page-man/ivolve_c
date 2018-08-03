@@ -8,9 +8,9 @@
     <!--  ticket link  -->
     <div class="nav-right">
       <span class="nav-item">
-      <a href="http://m.sp2.fujitv.co.jp/lib_info.cgi?bid=2863&cid=44" class="button is-info" target='_blank'>
-          <i class="fa fa-picture-o" aria-hidden="true"></i>
-          <span class="ticketText">TIF2018 無料壁紙！</span>
+      <a href="https://twitter.com/IVOLVE_4/status/1025226669974417408" class="button is-info" target='_blank'>
+          <i class="fa fa-ticket" aria-hidden="true"></i>
+          <span class="ticketText">ワンマンライブ開催！</span>
         </a>
     </div>  
   </header>
