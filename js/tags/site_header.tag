@@ -8,10 +8,10 @@
     <!--  ticket link  -->
     <div class="nav-right">
       <span class="nav-item">
-      <a href="https://twitter.com/IVOLVE_4/status/1025226669974417408" class="button is-info" target='_blank'>
-          <i class="fa fa-ticket" aria-hidden="true"></i>
-          <span class="ticketText">ワンマンライブ開催！</span>
-        </a>
+      <a href="https://twitter.com/IVOLVE_4/status/1045303515168485376" class="button is-warning" target='_blank'>
+        <i class="fa fa-ticket" aria-hidden="true"></i>
+        <span class="ticketText">10.14ワンマンライブ！</span>
+      </a>
     </div>  
   </header>
   <style>
