@@ -3,14 +3,24 @@
     <div class="hero-body">
       <div class="container">
         <h1 class="title hero_title">
-          IVOLVE
+          IVOLVER育成サイト
         </h1>
         <h2 class="hero_subtitle subtitle">
-          IVOLVEの一般的なコールをまとめました
+          IVOLVEの一般的なコールや音源情報などをまとめました
         </h2>
       </div>
     </div>
   </section>
+
+  <div class='tabs is-boxed is-fullwidth'>
+    <ul>
+      <li each={tab in this.tabs} class="header_tab {tab.active ? 'is-active':''}">
+        <a href="{tab.href}">
+          <span>{tab.title}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
   <style>
   .hero{
     &-body {
@@ -29,6 +39,18 @@
   }
   </style>
   <script>
+  this.tabs = [
+    {
+      href:'./'
+      ,active:location.hash === ''
+      ,title:'コール'
+    }
+    ,{
+      href:'./#sound-source'
+      ,active: location.hash === '#sound-source'
+      ,title:'音源' 
+    }
+  ]
   init(){
     // site-header分のpadding-topをつける
     var hh = document.getElementById('site_header').offsetHeight;

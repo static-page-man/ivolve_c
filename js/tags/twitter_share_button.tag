@@ -2,9 +2,9 @@
 <div class="footer__twitter_button">
   <a href="https://twitter.com/share" 
     class="twitter-share-button" 
-    data-text="IVOLVEのコール練習中！"
+    data-text="{this.dataText}"
     data-url="{this.dataUrl}"
-    data-hashtags="IVOLVE,コール" 
+    data-hashtags="{this.hashTags}" 
     data-show-count="false">Tweet</a>
   <div class="footer__twitter_button">
   <style>
@@ -15,6 +15,30 @@
   </style>
   <script>
     this.dataUrl = location.href;
+    this.dataText = getTwitterText();
+    this.hashTags = getTwitterHashTags();
+    function getTwitterHashTags(){
+      var hash = location.hash;
+      var text = 'IVOVLE'
+      if(hash === '#sound-source'){
+        text += ',IVOLVE音源リンク'
+      }else {
+        text += ',コール練習中'
+      }
+      return text; 
+    }
+
+    function getTwitterText(){
+      var hash = location.hash;
+      var text = 'IVOVLEのコール練習中'
+      if(hash === '#sound-source'){
+        text = 'IVOLVEの音源リンク'
+      }else {
+
+      }
+      return text;
+    }
+
     init(){
       // twitterボタン生成
       twttr.widgets.load();
