@@ -19,7 +19,7 @@
     this.hashTags = getTwitterHashTags();
     function getTwitterHashTags(){
       var hash = location.hash;
-      var text = 'IVOVLE'
+      var text = 'IVOLVE'
       if(hash === '#sound-source'){
         text += ',IVOLVE音源リンク'
       }else {
