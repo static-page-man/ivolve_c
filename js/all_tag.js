@@ -1,4 +1,16 @@
-riot.tag2('hero-header', '<section id="hero-header" class="hero"> <div class="hero-body"> <div class="container"> <h1 class="title hero_title"> IVOLVE </h1> <h2 class="hero_subtitle subtitle"> IVOLVEの一般的なコールをまとめました </h2> </div> </div> </section>', 'hero-header .hero-body,[data-is="hero-header"] .hero-body{ background-image: url("./image/016sukagamino17103_TP_V.jpg"); background-position: center; background-size: cover; } hero-header .hero_title,[data-is="hero-header"] .hero_title{ color: #fff; font-weight: bold; } hero-header .hero_subtitle,[data-is="hero-header"] .hero_subtitle{ color: #fff; font-size: 1rem; }', '', function(opts) {
+riot.tag2('hero-header', '<section id="hero-header" class="hero"> <div class="hero-body"> <div class="container"> <h1 class="title hero_title"> IVOLVER育成サイト </h1> <h2 class="hero_subtitle subtitle"> IVOLVEの一般的なコールや音源情報などをまとめました </h2> </div> </div> </section> <div class="tabs is-boxed is-fullwidth"> <ul> <li each="{tab in this.tabs}" class="header_tab {tab.active ? \'is-active\':\'\'}"> <a href="{tab.href}"> <span>{tab.title}</span> </a> </li> </ul> </div>', 'hero-header .hero-body,[data-is="hero-header"] .hero-body{ background-image: url("./image/016sukagamino17103_TP_V.jpg"); background-position: center; background-size: cover; } hero-header .hero_title,[data-is="hero-header"] .hero_title{ color: #fff; font-weight: bold; } hero-header .hero_subtitle,[data-is="hero-header"] .hero_subtitle{ color: #fff; font-size: 1rem; }', '', function(opts) {
+  this.tabs = [
+    {
+      href:'./'
+      ,active:location.hash === ''
+      ,title:'コール'
+    }
+    ,{
+      href:'./#sound-source'
+      ,active: location.hash === '#sound-source'
+      ,title:'音源'
+    }
+  ]
   this.init = function(){
 
     var hh = document.getElementById('site_header').offsetHeight;
@@ -10,7 +22,7 @@ riot.tag2('index-page', '<top-page></top-page> <site-footer></site-footer>', '',
 });
 riot.tag2('site-footer', '<footer class="footer footer_clear"> <div class="container"> <div class="content has-text-centered"> <p> まずはスマホ用のレイアウトで作成しています。<br> 何か不具合がありましたらこちらまで <a href="https://twitter.com/PageStatic" target="_blank">@PageStatic</a> </p> </div> </div> <twitter-share-button></twitter-share-button> </footer>', '', '', function(opts) {
 });
-riot.tag2('site-header', '<header id="site_header" class="nav is-info"> <div class="nav-left"> <span class="nav-item"> <a id="siteTitle" href="./"></a> </span> </div> <div class="nav-right"> <span class="nav-item"> <a href="https://twitter.com/IVOLVE_4/status/1045303515168485376" class="button is-warning" target="_blank"> <i class="fa fa-ticket" aria-hidden="true"></i> <span class="ticketText">10.14ワンマンライブ！</span> </a> </div> </header>', 'site-header #site_header,[data-is="site-header"] #site_header{ position: fixed; width: 100%; }', '', function(opts) {
+riot.tag2('site-header', '<header id="site_header" class="nav is-info"> <div class="nav-left"> <span class="nav-item"> <a id="siteTitle" href="./"></a> </span> </div> <div class="nav-right"> <span class="nav-item"> <a href="https://twitter.com/IVOLVE_4/status/1052472489215807489" class="button is-warning" target="_blank"> <i class="fa fa-ticket" aria-hidden="true"></i> <span class="ticketText">TOUR "Thanx a lot!"</span> </a> </div> </header>', 'site-header #site_header,[data-is="site-header"] #site_header{ position: fixed; width: 100%; }', '', function(opts) {
 });
 riot.tag2('song-list', '<div if="{!this.list}"> Now loading...</div> <ul if="{this.list}" class="call_ul"> <li if="{song.active === \'TRUE\'}" each="{song in this.list}" class="call_li"> <a href="{location.href}#song?title={song.title}"> <div class="media"> <figure class="media-left"> <p class="image is-64x64 call_li__image" riot-style="background-image:url({song.thumbnail_image_url})"></p> </figure> <div class="media-content"> <div class="content dandy_content"> <strong class="song_title">{song.title}</strong> <div if="{song.tag}" class="tags"> <span each="{t in song.tag.split(\',\')}" class="tags__tag tag is-danger">{t}</span> </div> </div> </div> </div> </a> </li> </ul>', 'song-list .song,[data-is="song-list"] .song{ background: #f00; } song-list .song_title,[data-is="song-list"] .song_title{ font-size: 1.25rem; color: #69707a; } song-list .song_content,[data-is="song-list"] .song_content{ display: flex; flex-direction: column; } song-list .tags__tag,[data-is="song-list"] .tags__tag{ margin-right: 0.25rem; }', '', function(opts) {
     var self = this;
@@ -146,10 +158,116 @@ riot.tag2('song-page', '<div class="youtube_wrap"> <div id="player"></div> </div
 });
 
 
+riot.tag2('sound-source', '<hero-header></hero-header> <div class="container"> <div if="{!this.list}"> Now loading...</div> <ul if="{this.list}" class="call_ul"> <li each="{item in this.list}" class="call_li"> <a href="{item.href}"> <div class="media"> <figure class="media-left"> <p class="image is-64x64 call_li__image" riot-style="background-image:url({item.thumbnail_image_url})"></p> </figure> <div class="media-content"> <div class="content dandy_content"> <strong class="song_title">{item.title}</strong> <div if="{item.tag}" class="tags"> <span each="{t in item.tag.split(\',\')}" class="tags__tag tag is-danger">{t}</span> </div> </div> </div> </div> </a> </li> </ul> </div> <site-footer></site-footer>', 'sound-source .song,[data-is="sound-source"] .song{ background: #f00; } sound-source .song_title,[data-is="sound-source"] .song_title{ font-size: 1.25rem; color: #69707a; } sound-source .song_content,[data-is="sound-source"] .song_content{ display: flex; flex-direction: column; } sound-source .tags__tag,[data-is="sound-source"] .tags__tag{ margin-right: 0.25rem; }', '', function(opts) {
+    var self = this;
+
+    this.list = [
+      {
+        title:'YouTube'
+        ,href:'https://www.youtube.com/channel/UCPUtHmTRUendX7aIQ1zDN1w/featured'
+        ,tag:'MV,ライブ動画'
+        ,thumbnail_image_url:'https://pbs.twimg.com/media/DpyAO5hU8AA2lqt.jpg'}
+      ,{
+        title:'Soundcloud'
+        ,href:'https://soundcloud.com/ivolve_4'
+        ,tag:'限定配信音源'
+        ,thumbnail_image_url:'https://pbs.twimg.com/media/DpyAqAPUcAEk0xG.jpg'}
+      ,{
+        title:'LINE MUSIC'
+        ,href:'https://music.line.me/artist/mi000000000f42091b'
+        ,tag:'ストリーミングサービス'
+        ,thumbnail_image_url:'https://pbs.twimg.com/media/DpyAwyeU8AAGnoi.jpg'}
+      ,{
+        title:'Apple Music'
+        ,href:'https://itunes.apple.com/jp/artist/ivolve/981467372'
+        ,tag:'ストリーミングサービス'
+        ,thumbnail_image_url:'https://pbs.twimg.com/media/DpyA-SUU0AA8Ayb.jpg'}
+      ,{
+        title:'Google Play Music'
+        ,href:'https://play.google.com/store/music/artist/IVOLVE?id=A6a5wskvmlr4xfgim5ksihpdn4y'
+        ,tag:'ストリーミングサービス'
+        ,thumbnail_image_url:'https://pbs.twimg.com/media/DpyBLZYU0AASsqJ.jpg'}
+      ,{
+        title:'Spotify'
+        ,href:'https://open.spotify.com/artist/1wwQQN5vWUHSZxehN4VsWZ?si=kZile3ZuT7qrpwzV5tMXEA'
+        ,tag:'ストリーミングサービス'
+        ,thumbnail_image_url:'https://pbs.twimg.com/media/DpyBe4yVAAAIb-9.jpg'}
+      ,{
+        title:'AWA'
+        ,href:'https://mf.awa.fm/2PG3Qgv'
+        ,tag:'ストリーミングサービス'
+        ,thumbnail_image_url:'https://pbs.twimg.com/media/DpyBnwCU4AEc-XS.jpg'}
+      ,{
+        title:'amazon music'
+        ,href:'https://music.amazon.co.jp/artists/B00VGF07TC/CATALOG?ref=dm_wcp_artist_link_pr_s'
+        ,tag:'ストリーミングサービス'
+        ,thumbnail_image_url:'https://pbs.twimg.com/media/DpyBy7DU0AIkp9i.jpg'}
+    ];
+
+    this.relaodSongList = function() {
+      self.list = this.list;
+      this.update();
+    }.bind(this)
+    this.observerList = [
+      {
+        event:'song_list:relaodSongList'
+        ,callback:this.relaodSongList
+      }
+    ];
+
+    this.init = function() {
+
+      this.observerList.forEach(function(ob){
+        if(ob['event'] && ob['callback']){
+          riotObserver.on(ob['event'],ob['callback']);
+        }
+      });
+
+      if(!ARISU['songList']){
+        getSongList('song_list:relaodSongList');
+      }
+    }.bind(this)
+
+    this.close = function(){
+
+      this.observerList.forEach(function(ob){
+        if(ob['event']){
+          riotObserver.off(ob['event']);
+        }
+      });
+    }.bind(this)
+
+    this.on('mount', this.init)
+    this.on('unmount', this.close)
+});
 riot.tag2('top-page', '<hero-header></hero-header> <div class="container"> <song-list><song-list> </div>', '', '', function(opts) {
 });
-riot.tag2('twitter-share-button', '<div class="footer__twitter_button"> <a href="https://twitter.com/share" class="twitter-share-button" data-text="IVOLVEのコール練習中！" data-url="{this.dataUrl}" data-hashtags="IVOLVE,コール" data-show-count="false">Tweet</a> <div class="footer__twitter_button">', 'twitter-share-button .footer__twitter_button,[data-is="twitter-share-button"] .footer__twitter_button{ text-align: center; margin: 2rem; }', '', function(opts) {
+riot.tag2('twitter-share-button', '<div class="footer__twitter_button"> <a href="https://twitter.com/share" class="twitter-share-button" data-text="{this.dataText}" data-url="{this.dataUrl}" data-hashtags="{this.hashTags}" data-show-count="false">Tweet</a> <div class="footer__twitter_button">', 'twitter-share-button .footer__twitter_button,[data-is="twitter-share-button"] .footer__twitter_button{ text-align: center; margin: 2rem; }', '', function(opts) {
     this.dataUrl = location.href;
+    this.dataText = getTwitterText();
+    this.hashTags = getTwitterHashTags();
+    function getTwitterHashTags(){
+      var hash = location.hash;
+      var text = 'IVOVLE'
+      if(hash === '#sound-source'){
+        text += ',IVOLVE音源リンク'
+      }else {
+        text += ',コール練習中'
+      }
+      return text;
+    }
+
+    function getTwitterText(){
+      var hash = location.hash;
+      var text = 'IVOVLEのコール練習中'
+      if(hash === '#sound-source'){
+        text = 'IVOLVEの音源リンク'
+      }else {
+
+      }
+      return text;
+    }
+
     this.init = function(){
 
       twttr.widgets.load();

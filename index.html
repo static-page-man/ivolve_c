@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96191496-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-96191496-2');
@@ -15,7 +16,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.1.2/css/bulma.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  <title>IVOLVEのコール</title>
+  <title>IVOLVER育成サイト</title>
 
   <meta name="description" content="IVOLEの代表的なコールを集めました。">
   <meta name="keywords" content="IVOLVE,IVOLVEのコール,コール,的なEasy,DISCOVERY,ハイフライフロウ">
@@ -36,34 +37,37 @@
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   <!-- script -->
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <!-- tag -->
   <script src="./node_modules/riot/riot.min.js"></script>
   <script src="./node_modules/riot-route/dist/route.min.js"></script>
   <script src='./js/all_tag.js'></script>
   <script src="./js/app.js"></script>
 </head>
+
 <body>
   <site-header></site-header>
   <div id="page-contents"></div>
   <script>
     // router
-    route("", function(){
+    route("", function () {
       riot.mount('#page-contents', 'index-page');
     });
 
-    route('song..', function(){
+    route("sound-source", function () {
+      riot.mount('#page-contents', 'sound-source');
+    });
+
+    route('song..', function () {
       poyyer('route');
       var q = route.query();
       var deTitle = decodeURIComponent(q.title);
       poyyer(deTitle);
 
       // GA
-      gtag('event','song/'+deTitle);
-      riot.mount('#page-contents', 'song-page', {songTitle:deTitle});
+      gtag('event', 'song/' + deTitle);
+      riot.mount('#page-contents', 'song-page', { songTitle: deTitle });
     });
     route.start(true);
 
@@ -71,8 +75,9 @@
     var riotObserver = riot.observable();
     // tag mount
     riot.mount('*');
-    
+
     document.getElementById('siteTitle').innerHTML = siteTitle;
   </script>
 </body>
+
 </html>
