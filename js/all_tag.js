@@ -259,7 +259,7 @@ riot.tag2('twitter-share-button', '<div class="footer__twitter_button"> <a href=
 
     function getTwitterText(){
       var hash = location.hash;
-      var text = 'IVOVLEのコール練習中'
+      var text = 'IVOLVEのコール練習中'
       if(hash === '#sound-source'){
         text = 'IVOLVEの音源リンク'
       }else {
