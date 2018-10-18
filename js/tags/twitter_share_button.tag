@@ -30,7 +30,7 @@
 
     function getTwitterText(){
       var hash = location.hash;
-      var text = 'IVOVLEのコール練習中'
+      var text = 'IVOLVEのコール練習中'
       if(hash === '#sound-source'){
         text = 'IVOLVEの音源リンク'
       }else {
