@@ -248,7 +248,7 @@ riot.tag2('twitter-share-button', '<div class="footer__twitter_button"> <a href=
     this.hashTags = getTwitterHashTags();
     function getTwitterHashTags(){
       var hash = location.hash;
-      var text = 'IVOVLE'
+      var text = 'IVOLVE'
       if(hash === '#sound-source'){
         text += ',IVOLVE音源リンク'
       }else {
