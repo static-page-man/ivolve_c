@@ -1,5 +1,15 @@
 <script>
-  // ハイフライフロウ
-  var url = "https://www.youtube.com/watch?v=ir89bQomGzg";
+  var movieList = [
+    "https://www.youtube.com/watch?v=ir89bQomGzg", // ハイフライフロウ
+    "https://www.youtube.com/watch?v=8AGzgiqw4O4", // Humanoid Human
+    "https://www.youtube.com/watch?v=nqAIS2IBKOU", // テンプラ
+    "https://www.youtube.com/watch?v=l_TlmgbGxFw", // Wannabe
+    "https://www.youtube.com/watch?v=cJekKtcs1bI", // 【メイキング】IVOLVE LIVE TOUR 2018"Thanx a lot!" ~YAMAGUCHI~幕間映像
+    "https://www.youtube.com/watch?v=0I-VPTXATek", // 【メイキング】IVOLVE LIVE TOUR 2018"Thanx a lot!" ~NAGOYA~幕間映像
+    "https://www.youtube.com/watch?v=qaBzYLKVsxc", // 【メイキング】IVOLVE LIVE TOUR 2018"Thanx a lot!" ~MATSUYAMA~幕間映像
+    "https://www.youtube.com/watch?v=54M6R79Ul8E", // 【メイキング】IVOLVE LIVE TOUR 2018"Thanx a lot!"~FUKUOKA~ 幕間映像
+    "https://www.youtube.com/watch?v=b_DAqnQ4vhQ" // 【メイキング】IVOLVE LIVE TOUR 2018"Thanx a lot!"~OSAKA~ 幕間映像
+  ];
+  var url = movieList[Math.floor(Math.random() * movieList.length)];
   location.href = url;
 </script>
