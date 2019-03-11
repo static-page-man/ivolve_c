@@ -9,7 +9,7 @@
     <div class="nav-right">
       <span class="nav-item">
       <a href="https://twitter.com/IVOLVE_4/status/1079021877408915456" class="button is-warning" target='_blank'>
-        <i class="fa fa-compact-disc" aria-hidden="true"></i>
+        <i class="fa fa-music" aria-hidden="true"></i>
         <span class="ticketText">4/24 1stアルバム発売</span>
       </a>
     </div>  
